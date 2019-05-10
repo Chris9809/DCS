@@ -32,6 +32,10 @@ public class User {
                 '}';
     }
 
+    public void sayhello(){
+        System.out.println("hello");
+    }
+
     public Integer getId() {
         return id;
     }

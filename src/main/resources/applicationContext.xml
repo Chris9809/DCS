@@ -15,7 +15,11 @@
 	<!-- 引入资源文件 -->
  	<context:property-placeholder 
 		location="classpath:mysql.properties"/>
-	<!-- DataSource -->		
+	<!-- DataSource -->
+	<!--userservice注册-->
+	<bean class="cn.sdtbu.imaker.DCS.service.impl.UserServiceImpl" id="userService">
+	</bean>
+
 	<bean id="dataSource" 
 		class="org.apache.commons.dbcp.BasicDataSource">
 		<property name="driverClassName" value="${mysql.driver}"/>
@@ -62,9 +66,12 @@
 			<tx:method name="delete*" propagation="REQUIRED"/>
 		</tx:attributes>
 	</tx:advice>
+	<aop:aspectj-autoproxy/>
 <!-- AOP切面 -->	
 	<aop:config>
+<!--切入点是service下面-->
 		<aop:pointcut expression="execution(* cn.sdtbu.imaker.DCS.service.*.*(..))" id="pointcut"/>
 		<aop:advisor advice-ref="txAdvie" pointcut-ref="pointcut"/>
 	</aop:config>
+
 </beans>
