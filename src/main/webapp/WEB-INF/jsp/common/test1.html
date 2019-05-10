@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
+    <title>Bootstrap 101 Template</title>
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+    <link href="../../../css/fileinput/css/fileinput.min.css" media="all" rel="stylesheet" type="text/css"/>
+    <script src="../../../css/common/test.css"></script>
+</head>
+<body>
+<!--导航栏-->
+<div class="navbar navbar-default">
+    <div class="container">
+        <div class="navbar-header">
+            <a class="navbar-brand">
+                作业查重
+            </a>
+            <ul class="nav navbar-nav">
+                <li><a href="#">首页</a> </li>
+                <li><a href="#">首页</a> </li>
+                <li><a href="#">首页</a> </li>
+            </ul>
+        </div>
+        <ul class="nav navbar-nav navbar-right">
+            <li><a href="#">注册</a> </li>
+            <li><a href="#">登录</a></li>
+        </ul>
+    </div>
+</div>
+<!-- -->
+<div class="container">
+    <div class="row">
+        <!--侧栏-->
+        <div class="col-sm-2">
+            <div class="list-group side-bar" >
+                <a href="" class="list-group-item active">上传文件</a>
+                <a href="" class="list-group-item">Null</a>
+                <a href="" class="list-group-item">Null</a>
+                <a href="" class="list-group-item">Null</a>
+            </div>
+        </div>
+        <!---->
+        <div class="col-sm-10" >
+            <h2 class="title">上传作业,提交查重</h2>
+            <!-- 按钮触发模态框 --> 
+            <!-- Button trigger modal -->
+            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+                Launch Modal
+            </button>
+            <!-- Modal -->
+            <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-lg" role="document">
+                    <form>
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                            <div class="modal-body">
+                                <div class="file-loading">
+                                    <input id="uploadFiles" name="uploadFiles[]" class="file-loading" multiple type="file">
+                                </div>
+                                <div id="kartik-file-errors"></div>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                <button type="button" class="btn btn-primary" title="Your custom upload logic">Save</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<!-- jQuery (Bootstrap 的所有 JavaScript 插件都依赖 jQuery，所以必须放在前边) -->
+<script src="https://cdn.jsdelivr.net/npm/jquery@1.12.4/dist/jquery.min.js"></script>
+<!-- 加载 Bootstrap 的所有 JavaScript 插件。你也可以根据需要只加载单个插件。 -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/js/bootstrap.min.js"></script>
+<script src="../../../js/fileinput/js/fileinput.js" type="text/javascript"></script>
+<script src="../../../js/fileinput/themes/fa/theme.js" type="text/javascript"></script>
+<script src="../../../js/fileinput/js/locales/zh.js" type="text/javascript"></script>
+<script >
+    $(document).on('ready', function() {
+        $("#uploadFiles").fileinput({
+            language: 'zh', //设置语言
+            showPreview: false,
+            showUpload: true, //是否显示上传按钮
+            elErrorContainer: '#kartik-file-errors',
+            allowedFileExtensions: ["docx","doc"]
+        });
+    });
+</script>
+</body>
+</html>

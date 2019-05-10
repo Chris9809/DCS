@@ -1,0 +1,16 @@
+.navbar-brand{
+    /*background-image: url();*/
+    /*width: 50px;*/
+    /*background-position: center center;*/
+    /*background-size: 80%;*/
+    /*background-repeat: no-repeat;*/
+}
+.side-bar .list-group-item{
+    border: 0;
+    border-radius: 0px;
+    margin-bottom: 5px;
+}
+.side-bar .list-group-item.active{
+    /*background-color: #fff;*/
+
+}
