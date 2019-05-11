@@ -14,3 +14,6 @@
     /*background-color: #fff;*/
 
 }
+#toggle-checkbox:checked ~div{
+    display: block !important;
+}

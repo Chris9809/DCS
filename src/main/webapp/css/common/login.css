@@ -1,0 +1,10 @@
+.container-small{
+    max-width: 500px;
+}
+.btn-primary{
+    /*background: #fff;*/
+    /*border-color: #000;*/
+}.btn-primary:hover{
+    background: #1c5586;
+    border-color: #1c5586;
+}
